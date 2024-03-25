@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="forAddress" class="dev.prathmesh.demo.Address">
+        <constructor-arg value="Kolhapur" ></constructor-arg>
+        <constructor-arg value="Maharashtra" ></constructor-arg>
+        <constructor-arg value="India" ></constructor-arg>
+    </bean>
+
+    <bean id="forEmployee" class="dev.prathmesh.demo.Employee">
+        <constructor-arg value="12" ></constructor-arg>
+        <constructor-arg value="Prathmesh Parit" ></constructor-arg>
+        <constructor-arg >
+            <ref bean="forAddress"/>
+        </constructor-arg>
+    </bean>
+</beans>
